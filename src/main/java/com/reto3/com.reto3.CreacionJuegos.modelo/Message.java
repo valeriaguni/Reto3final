@@ -17,7 +17,7 @@ public class Message implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="game_id")
-    @JsonIgnoreProperties({"messages", "reservation"})
+    @JsonIgnoreProperties({"messages", "reservations"})
     private Game game;
 
 
