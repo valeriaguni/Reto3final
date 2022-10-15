@@ -1,7 +1,7 @@
 package com.reto3.Repository;
 
-import com.reto3.Repository.com.reto3.CreacionHoteles.Crud.ScoreCrudRepository;
-import com.reto3.com.reto3.CreacionHoteles.modelo.Score;
+import com.reto3.Repository.com.reto3.CreacionJuegos.Crud.ScoreCrudRepository;
+import com.reto3.com.reto3.CreacionJuegos.modelo.Score;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
