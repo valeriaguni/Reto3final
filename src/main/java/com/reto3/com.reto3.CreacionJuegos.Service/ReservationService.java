@@ -106,7 +106,7 @@ public class ReservationService {
 
             List<Reservation> cancelled = reservationRepository.getReservationByStatus("cancelled");
 
-            return new CountStatus((long)completed.size(),(long) cancelled.size());
+            return new CountStatus(completed.size(), cancelled.size());
         }
 
 }

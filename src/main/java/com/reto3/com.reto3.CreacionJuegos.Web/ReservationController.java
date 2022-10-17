@@ -1,6 +1,8 @@
 package com.reto3.com.reto3.CreacionJuegos.Web;
 
 import com.reto3.com.reto3.CreacionJuegos.Service.ReservationService;
+import com.reto3.com.reto3.CreacionJuegos.modelo.DTOs.CountClient;
+import com.reto3.com.reto3.CreacionJuegos.modelo.DTOs.CountStatus;
 import com.reto3.com.reto3.CreacionJuegos.modelo.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,6 +42,18 @@ public class ReservationController {
     public boolean delete(@PathVariable("id") int id){
         return reservationService.delete(id);
     }
+    @GetMapping("/report-status")
+    public CountStatus getReservationDescriptionAmount() {
+        return reservationService.getReservationByStatus();
+    }
 
+    @GetMapping("/report-clients")
+    public List<CountClient> getCountClient() {
+        return reservationService.getTopClients();
+    }
+    @GetMapping("report-dates/{startDate}/{devolutionDate}")
+    public List<Reservation> getReservationReport(@PathVariable("startDate") String startDateString, @PathVariable("devolutionDate") String devolutionDateString) {
+        return reservationService.getReservationPeriod(startDateString, devolutionDateString);
+    }
 
 }

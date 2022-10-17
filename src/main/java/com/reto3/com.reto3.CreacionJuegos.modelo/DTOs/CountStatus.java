@@ -1,27 +1,27 @@
 package com.reto3.com.reto3.CreacionJuegos.modelo.DTOs;
 
 public class CountStatus {
-    private Long completed;
-    private Long cancelled;
+    private int completed;
+    private int cancelled;
 
-    public CountStatus(Long completed, Long cancelled){
+    public CountStatus(int completed, int cancelled){
         this.completed = completed;
         this.cancelled = cancelled;
     }
 
-    public Long getCompleted() {
+    public int getCompleted() {
         return completed;
     }
 
-    public void setCompleted(Long completed) {
+    public void setCompleted(int completed) {
         this.completed = completed;
     }
 
-    public Long getCancelled() {
+    public int getCancelled() {
         return cancelled;
     }
 
-    public void setCancelled(Long cancelled) {
+    public void setCancelled(int cancelled) {
         this.cancelled = cancelled;
     }
 }
