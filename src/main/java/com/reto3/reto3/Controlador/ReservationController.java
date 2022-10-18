@@ -1,5 +1,7 @@
 package com.reto3.reto3.Controlador;
 
+import com.reto3.reto3.Entidad.DTOs.CountClient;
+import com.reto3.reto3.Entidad.DTOs.CountStatus;
 import com.reto3.reto3.Entidad.Reservation;
 import com.reto3.reto3.Entidad.Reservation;
 import com.reto3.reto3.Servicio.ReservationService;
@@ -39,5 +41,19 @@ public class ReservationController {
     @ResponseStatus(HttpStatus.CREATED)
     public Reservation updateReservation(@RequestBody Reservation Reservation){
         return service.updateReservation(Reservation);
+    }
+
+    @GetMapping("/report-status")
+    public CountStatus getReservationDescriptionAmount() {
+        return service.getReservationByStatus();
+    }
+
+    @GetMapping("/report-clients")
+    public List<CountClient> getCountClient() {
+        return service.getTopClients();
+    }
+    @GetMapping("report-dates/{startDate}/{devolutionDate}")
+    public List<Reservation> getReservationReport(@PathVariable("startDate") String startDateString, @PathVariable("devolutionDate") String devolutionDateString) {
+        return service.getReservationPeriod(startDateString, devolutionDateString);
     }
 }
