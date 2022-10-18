@@ -1,16 +1,9 @@
 package com.reto3.reto3.Servicio;
 
 import com.reto3.reto3.Entidad.Category;
-import com.reto3.reto3.Entidad.Category;
-import com.reto3.reto3.Entidad.Category;
 import com.reto3.reto3.Repositorio.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.lang.reflect.Field;
 import java.util.List;
