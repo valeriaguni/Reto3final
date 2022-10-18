@@ -3,6 +3,7 @@ package com.reto3.reto3.Controlador;
 import com.reto3.reto3.Entidad.Client;
 import com.reto3.reto3.Servicio.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,10 +32,15 @@ public class ClientController {
         return ResponseEntity.status(201).build();
     }*/
 
-        @DeleteMapping("/{id}")
-        public ResponseEntity deleteClient(@PathVariable long id){
-            service.deleteClient(id);
-            return ResponseEntity.status(204).build();
-        }
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean deleteClient(@PathVariable int id){
+        return service.deleteClient(id);
+    }
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Client updateClient(@RequestBody Client client){
+        return service.updateClient(client);
+    }
     }
 

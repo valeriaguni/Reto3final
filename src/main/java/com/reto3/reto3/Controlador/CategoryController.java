@@ -1,8 +1,10 @@
 package com.reto3.reto3.Controlador;
 
 import com.reto3.reto3.Entidad.Category;
+import com.reto3.reto3.Entidad.Category;
 import com.reto3.reto3.Servicio.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,9 +35,15 @@ public class CategoryController {
         return ResponseEntity.status(201).build();
     }*/
 
+
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteCategory(@PathVariable long id){
-        service.deleteCategory(id);
-        return ResponseEntity.status(204).build();
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean deleteCategory(@PathVariable int id){
+        return service.deleteCategory(id);
+    }
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Category updateCategory(@RequestBody Category Category){
+        return service.updateCategory(Category);
     }
 }
