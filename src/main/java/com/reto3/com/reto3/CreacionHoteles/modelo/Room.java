@@ -13,9 +13,9 @@ public class Room implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String developer;
-    @Column(name="years")
-    private Integer year;
+    private String hotel;
+    @Column(name="stars")
+    private Integer star;
     private String description;
 
 
@@ -51,20 +51,20 @@ public class Room implements Serializable {
         this.name = name;
     }
 
-    public String getDeveloper() {
-        return developer;
+    public String getHotel() {
+        return hotel;
     }
 
-    public void setDeveloper(String developer) {
-        this.developer = developer;
+    public void setHotel(String hotel) {
+        this.hotel = hotel;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getStar() {
+        return star;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setStar(Integer star) {
+        this.star = star;
     }
 
     public String getDescription() {

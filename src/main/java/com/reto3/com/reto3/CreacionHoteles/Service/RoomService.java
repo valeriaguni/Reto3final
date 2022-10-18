@@ -38,11 +38,11 @@ public class RoomService {
                 if (room.getName() != null){
                     c.get().setName(room.getName());
                 }
-                if(room.getDeveloper() != null){
-                    c.get().setDeveloper(room.getDeveloper());
+                if(room.getHotel() != null){
+                    c.get().setHotel(room.getHotel());
                 }
-                if(room.getYear() != null){
-                    c.get().setYear(room.getYear());
+                if(room.getStar() != null){
+                    c.get().setStar(room.getStar());
                 }
                 if(room.getDescription() != null){
                     c.get().setDescription(room.getDescription());

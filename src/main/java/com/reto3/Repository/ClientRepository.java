@@ -1,7 +1,7 @@
 package com.reto3.Repository;
 
-import com.reto3.Repository.com.reto3.CreacionJuegos.Crud.ClientCrudRepository;
-import com.reto3.com.reto3.CreacionJuegos.modelo.Client;
+import com.reto3.Repository.com.reto3.CreacionHoteles.Crud.ClientCrudRepository;
+import com.reto3.com.reto3.CreacionHoteles.modelo.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

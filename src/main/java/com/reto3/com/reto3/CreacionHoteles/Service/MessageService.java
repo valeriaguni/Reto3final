@@ -38,8 +38,8 @@ public class MessageService {
                 if (message.getMessageText() != null){
                     c.get().setMessageText(message.getMessageText());
                 }
-                if(message.getRooms() != null){
-                    c.get().setRooms(message.getRooms());
+                if(message.getRoom() != null){
+                    c.get().setRoom(message.getRoom());
                 }
                 if(message.getClient() != null){
                     c.get().setClient(message.getClient());

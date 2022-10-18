@@ -1,9 +1,9 @@
 package com.reto3.Repository;
 
-import com.reto3.Repository.com.reto3.CreacionJuegos.Crud.ReservationCrudRepository;
-import com.reto3.com.reto3.CreacionJuegos.modelo.Client;
-import com.reto3.com.reto3.CreacionJuegos.modelo.DTOs.CountClient;
-import com.reto3.com.reto3.CreacionJuegos.modelo.Reservation;
+import com.reto3.Repository.com.reto3.CreacionHoteles.Crud.ReservationCrudRepository;
+import com.reto3.com.reto3.CreacionHoteles.modelo.Client;
+import com.reto3.com.reto3.CreacionHoteles.modelo.DTOs.CountClient;
+import com.reto3.com.reto3.CreacionHoteles.modelo.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

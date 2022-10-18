@@ -1,7 +1,7 @@
 package com.reto3.Repository;
 
-import com.reto3.Repository.com.reto3.CreacionJuegos.Crud.CategoryCrudRepository;
-import com.reto3.com.reto3.CreacionJuegos.modelo.Category;
+import com.reto3.Repository.com.reto3.CreacionHoteles.Crud.CategoryCrudRepository;
+import com.reto3.com.reto3.CreacionHoteles.modelo.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
